@@ -1,4 +1,26 @@
 {
+    "name": "web3d/DingtalkSDK",
+    "description": "钉钉 服务器端sdk php版本",
+    "homepage": "https://github.com/web3d/DingtalkSDK",
+    "license": "MIT",
+    "keywords": ["http", "dingtalk", "api"],
+    "version": "0.1.1",
+    "authors": [
+        {
+            "name": "Jimmy Jaw",
+            "email": "web3d@live.cn",
+            "homepage": "http://x3d.cnblogs.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "TimeCheer": "src/"
+        }
+    },
     "require": {
         "nategood/httpful": "^0.2.20"
     }
