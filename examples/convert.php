@@ -8,17 +8,29 @@ require 'JSONObject.php';
 $jo = new JSONObject;
 
 $json_str = '{
-           "id": 2,
-    "name": "钉钉事业部",
-    "order" : 10,
-    "parentid": 1,
-    "createDeptGroup": true,
-    "autoAddUser": true,
-    "deptHiding" : true,
-    "deptPerimits" : "3|4",
-    "orgDeptOwner" : "manager1122",
-    "deptManagerUseridList" : "manager1122|manager3211"
+    "userid": "zhangsan",
+           "name": "张三",
+    "tel" : "010-123333",
+    "workPlace" :"",
+    "remark" : "",
+    "mobile" : "13800000000",
+    "email" : "dingding@aliyun.com",
+    "active" : true,
+    "orderInDepts" : "{1:10, 2:20}",
+    "isAdmin" : false,
+    "isBoss" : false,
+    "dingId" : "WsUDaq7DCVIHc6z1GAsYDSA",
+    "isLeaderInDepts" : "{1:true, 2:false}",
+    "isHide" : false,
+    "department": [1, 2],
+    "position": "工程师",
+    "avatar": "dingtalk.com/abc.jpg",
+    "jobnumber": "111111",
+    "extattr": {
+                "爱好":"旅游",
+                "年龄":"24"
+                }
         }';
 
 
-echo $jo->toClass('Department', json_decode($json_str, true));
+echo $jo->toClass('User', json_decode($json_str, true));
