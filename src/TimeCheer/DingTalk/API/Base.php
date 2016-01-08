@@ -16,6 +16,7 @@ use TimeCheer\DingTalk\Client as HttpClient;
  * API访问基类
  * 
  * 定义api的地址前缀\封装通用访问方法等
+ * @link http://ddtalk.github.io/dingTalkDoc/
  *
  * @author Jimmy Jaw <web3d@live.cn>
  */
