@@ -90,7 +90,7 @@ class Base {
      * @param mixed $data
      * @return mixed ===false为失败
      */
-    protected function filterRseult($data) {
+    protected function filterResult($data) {
         if (!isset($data['errcode'])) {
             $this->setError(self::CODE_NET_FAIL, '网络错误');
             return false;
