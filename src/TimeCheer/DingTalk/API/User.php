@@ -18,7 +18,7 @@ class User extends Base {
     
     const API_GET = '/user/get';
     const API_CREATE = '/user/create';
-    const API_UPDAE = '/user/update';
+    const API_UPDATE = '/user/update';
     const API_DELETE = '/user/delete';
     const API_DELETE_ALL = '/user/batchdelete';
     const API_LIST = '/user/list';
@@ -70,7 +70,22 @@ class User extends Base {
         
         return $user;
     }
-    
+
+    /**
+     * CODE换取用户信息
+     * @param string $code
+     * @return array
+     */
+    public function getUserInfo($code) {
+        $user = $this->doGet(self::API_GET_INFO, array('code' => $code));
+
+        if ($user === false) {
+            return array();
+        }
+
+        return $user;
+    }
+
     /**
      * 创建成员
      * @link http://ddtalk.github.io/dingTalkDoc/#创建成员
